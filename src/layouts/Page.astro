@@ -1,0 +1,45 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Container from '../components/Container.astro';
+import ContactBtn from '../components/ContactBtn.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<style>
+		.btn-bytes {
+			position : relative;
+			z-index: 5
+		}
+
+		.btn-bytes::before {
+			content: '';
+			position: absolute;
+
+			width: 42px;
+			aspect-ratio: 1/1;
+			z-index: -1;
+			transition: all ease-in-out .3s;
+			@apply bg-turquase rounded-full;
+		}
+
+		.btn-bytes:hover::before {
+			width: 62px;
+			aspect-ratio: 1/1;
+		}
+	</style>
+	<body>
+		<div class="relative">
+			<Header />
+            <slot />
+			<Footer />
+		</div>
+	</body>
+	
+</html>

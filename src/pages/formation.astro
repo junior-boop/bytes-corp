@@ -1,0 +1,78 @@
+---
+import Container from "../components/Container.astro";
+import Page from "../layouts/Page.astro";
+import SectionLearn from '../components/sectionLearn'
+import ContactBtn from "../components/ContactBtn.astro";
+
+
+const formation: {titre : string, imageUrl : string, description: string}[] = [
+    {
+        titre : "Perfectionnement Word" ,
+        imageUrl : "/image_(1).png",
+        description : "Cette formation est destinée à ceux qui maîtrisent les bases de Word et souhaitent approfondir leurs compétences. Vous apprendrez à créer des documents professionnels, à utiliser des fonctionnalités avancées comme le publipostage, les styles personnalisés, et les macros, pour optimiser votre productivité."
+    }, 
+    {
+        titre : "Perfectionnement Excel",
+        description : "Apprenez à exploiter pleinement le potentiel d’Excel grâce à cette formation avancée. Vous découvrirez les outils de gestion des données, les tableaux croisés dynamiques, les formules complexes, et les macros, afin de transformer vos données en informations exploitables.",
+        imageUrl : "/image_(3).png"
+    }, 
+    {
+        titre : "Perfectionnement PowerPoint",
+        description : "Améliorez vos présentations avec cette formation axée sur les fonctionnalités avancées de PowerPoint. Apprenez à créer des présentations dynamiques et engageantes en utilisant des animations, des transitions personnalisées, des graphiques interactifs et des modèles professionnels.",
+        imageUrl : "/image_(2).png"
+    }, 
+    {
+        titre : "Gestion des Tableaux de Bord",
+        description :"Cette formation vous guide dans la création et la gestion de tableaux de bord efficaces pour le suivi et l’analyse des performances. Maîtrisez les outils et techniques pour visualiser vos données de manière claire et impactante, facilitant ainsi une prise de décision éclairée.",
+        imageUrl : "/image_(3).png"
+    },
+    {
+        titre : "Power BI",
+        description : "Découvrez le pouvoir de la visualisation de données avec Power BI. Cette formation vous apprendra à connecter des sources de données, à créer des rapports interactifs et à partager des tableaux de bord dynamiques pour une analyse approfondie et en temps réel.",
+        imageUrl : "/image_(7).png"
+    }
+]
+
+---
+<style>
+    .section-Formation {
+        @apply py-[56px];
+    } 
+</style>
+
+
+
+<Page>
+    <section>
+        <Container>
+            <div class="py-20 text-5xl font-extrabold px-6 lg:px-0">Formations</div>
+            <div class="w-full lg:w-[70%] px-6 lg:px-0">
+                Cette formation complète de perfectionnement sur Microsoft 365 vous permettra
+                d'approfondir vos compétences sur l'ensemble des outils bureautiques essentiels. À
+                travers des modules pratiques et interactifs, vous maîtriserez les fonctionnalités
+                avancées de Word pour la création de documents professionnels complexes, d'Excel
+                pour l'analyse de données et les tableaux croisés dynamiques, et de PowerPoint pour
+                des présentations percutantes. La formation couvre également l'utilisation optimale de
+                Teams pour la collaboration d'équipe, d'Outlook pour la gestion efficace des emails et
+                du calendrier, ainsi que de OneDrive pour le stockage et le partage sécurisé des
+                documents. Adaptée aux utilisateurs ayant déjà des connaissances de base, cette
+                formation vous donnera les clés pour améliorer votre productivité et votre efficacité
+                professionnelle.
+            </div>
+        </Container>
+    </section>
+    <section class="section-Formation">
+        <Container>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 px-6 lg:px-0">
+                {
+                    formation.map((el, key) => <SectionLearn 
+                            imageUrl={el.imageUrl}
+                            titre={el.titre}
+                            description={el.description}
+                        client:load />)
+                }
+            </div>
+        </Container>
+    </section>
+    <ContactBtn />
+</Page>

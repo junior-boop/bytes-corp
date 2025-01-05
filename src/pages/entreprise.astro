@@ -1,0 +1,143 @@
+---
+import Container from '../components/Container.astro'
+import Page from '../layouts/Page.astro'
+import Rubrique, { Liste} from '../components/rubrique'
+import ContactBtn from '../components/ContactBtn.astro'
+---
+
+<style>
+    .banniere {
+        @apply bg-turquase py-[75px] h-[512px] mb-24;
+
+        .containe {
+            @apply flex flex-col lg:flex-row gap-6 items-center px-6 lg:px-0;
+        }
+
+        img.image {
+            @apply w-[523px] aspect-square rounded-xl object-cover;
+        }
+    }
+
+    .info {
+        @apply py-[75px] ;
+    }
+    .approche {
+        @apply px-6 lg:px-0 lg:w-[70%] pb-10;
+    }
+
+    .rubrique {
+        @apply grid grid-cols-1 md:grid-cols-3 gap-[53px] ;
+    }
+
+    .btn-bytes {
+			position : relative;
+			z-index: 5
+		}
+
+    .btn-bytes::before {
+        content: '';
+        position: absolute;
+
+        width: 42px;
+        aspect-ratio: 1/1;
+        z-index: -1;
+        transition: all ease-in-out .3s;
+        @apply bg-turquase rounded-full;
+    }
+
+    .btn-bytes:hover::before {
+        width: 62px;
+        aspect-ratio: 1/1;
+    }
+</style>
+
+<Page>
+    <section class="banniere">
+        <Container>
+            <div class="containe">
+                <div data-aos="fade-up" class="flex-1">
+                    <h1 class="text-4xl lg:text-[64px] font-extrabold text-skyblue mb-6 lg:mb-10" >Entreprise</h1>
+                    <div class=" text-2xl lg:text-[40px] font-semibold text-skyblue" style="line-height: 1.2;">
+                        Notre priorité absolue est d'offrir une satisfaction totale à notre clientèle.
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200"  class="flex-1">
+                    <img src="/8.png" alt="bil bytes en veste" class="image">
+                </div>
+            </div>
+        </Container>
+    </section>
+    
+        
+    <section class="info">
+        <Container>
+            <div class="approche">
+                <h1 class="text-[40px] font-extrabold">
+                    Notre Approche
+                </h1>
+                <div class="text-[18px]">
+                    Nous comprenons les défis auxquels sont confrontées les entreprises de toutes tailles en matière de technologie. C'est pourquoi nous nous engageons à fournir des solutions informatiques sur mesure qui répondent non seulement aux exigences actuelles, mais qui sont également évolutives pour répondre aux besoins futurs. Notre approche consiste à travailler en étroite collaboration avec nos clients pour comprendre leurs objectifs et leurs contraintes, afin de proposer des solutions innovantes et pragmatiques
+                </div>
+            </div>
+        </Container>
+        <Liste client:load />
+    </section>
+    <section class="bg-[#00729E] py-[92px]">
+        <Container>
+            <div class="mb-10">
+                <div class="text-5xl lg:text-6xl font-extrabold text-white px-6 lg:px-0">+15 entreprises<br/> de marque</div>
+            </div>
+            <div class="px-6 lg:px-0 flex gap-4 flex-wrap justify-center lg:justify-start">
+                <div class="px-3 py-4 rounded-xl bg-[#fff]">
+                    <img src="/EY_logo.png" alt="EY" height="100%" class="h-[120px]">
+                </div>
+                <div class="px-3 py-4 rounded-xl bg-[#fff]" >
+                    <img src="/attijariwafa-bank-logo.png" alt="EY" height="100%" class="h-[120px]">
+                </div>
+                <div class="px-3 py-4 rounded-xl bg-[#fff]">
+                    <img src="/pan_african_logo.png" alt="EY" height="100%" class="h-[120px]">
+                </div>
+                <div class="px-3 py-4 rounded-xl bg-[#fff]">
+                    <img src="/afisa-for-p.png" alt="EY" height="100%" class="h-[120px]">
+                </div>
+                <div class="px-3 py-4 rounded-xl bg-[#fff]">
+                    <img src="/armelle_cosmetique_logo.png" alt="EY" height="100%" class="h-[120px]">
+                </div>
+                <div class="px-3 py-4 rounded-xl bg-[#fff]">
+                    <img src="/transafrique_logo.png" alt="EY" height="100%" class="h-[120px]">
+                </div>
+                
+                <div class="px-3 py-4 rounded-xl bg-[#fff]">
+                    <img src="/aspac_logo.png" alt="EY" height="100%" class="h-[120px]">
+                </div>
+                <div class="px-3 py-4 rounded-xl bg-[#fff]">
+                    <img src="/air_liquide.png" alt="EY" height="100%" class="h-[120px]">
+                </div>
+            </div>
+        </Container>
+    </section>
+    <section class="py-[92px]">
+        <Container>
+            <div class="flex items-center flex-col space-y-16">
+                <div class="text-2xl lg:text-5xl w-[75%] font-extrabold text-center " style="line-height: 1.1;">Un perfectionnement dans l’utilisation des outils professionnels Microsoft.</div>
+                <div class="w-full lg:w-[80%] flex gap-4 flex-wrap lg:flex-nowrap lg:gap-10 items-center justify-center px-6 lg:px-0">
+                    <img src="/image_(1).png" alt="image_microsoft">
+                    <img src="/image_(2).png" alt="image_microsoft">
+                    <img src="/image_(3).png" alt="image_microsoft">
+                    <img src="/image_(4).png" alt="image_microsoft">
+                    <img src="/image_(5).png" alt="image_microsoft">
+                    <img src="/image_(6).png" alt="image_microsoft">
+                    <img src="/image_(7).png" alt="image_microsoft">
+                </div>
+                <a href="/formation" class="inline-flex items-center justify-between gap-5 font-bold"> 
+                    Avoir plus d’informations
+
+                    <span class="btn-bytes w-[33px] aspect-square rounded-full  flex items-center justify-center text-skyblue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg>
+                    </span>
+                </a>
+            </div>
+        </Container>
+    </section>
+    <ContactBtn />
+</Page>

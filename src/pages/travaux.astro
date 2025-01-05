@@ -1,0 +1,95 @@
+---
+import ContactBtn from "../components/ContactBtn.astro";
+import Container from "../components/Container.astro";
+import Page from "../layouts/Page.astro";
+
+
+
+---
+
+<style>
+    .header-subtitle {
+        @apply w-full lg:w-[50%] ;
+    }
+
+    .animation { 
+        position: relative;
+        min-height: 100dvh;
+        overflow: hidden;
+    }
+    .section {
+        @apply w-full h-dvh  absolute top-0 left-0 z-[1] bg-cover bg-no-repeat bg-center;
+
+        .mask {
+            @apply bg-[#0005] w-dvw h-dvh;
+        }
+    }
+
+    .desc {
+        color : white;
+        @apply px-6 lg:px-0 w-[90%] lg:w-[50%] space-y-4 h-dvh flex flex-col justify-end py-20 relative z-10;
+
+        h1 {
+            line-height: 1.2;
+            @apply text-2xl lg:text-[40px] font-bold ;
+        }
+    }
+</style>
+
+<Page>
+    <section class="py-[23px] lg:py-[92px]">
+        <Container>
+            <div class="px-6 lg:px-0 h-[300px] flex justify-center flex-col">
+                <div class="font-bold text-4xl lg:text-[64px]" style="line-height: 1.1;">
+                    Quelques de nos <br/> travaux
+                </div>
+                <!-- <div class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at arcu ac metus hendrerit elementum. Donec tempor in leo quis varius. Praesent pretium finibus metus, a varius lorem.
+                </div> -->
+            </div>
+        </Container>
+    </section>
+    <section class="animation">
+        <div class="relative">
+            <div class="section" style="background-image: url(/chambre-falaise.png);">
+                <div class="mask"></div>
+            </div>
+            <Container>
+                <div class="desc">
+                    <div>
+                        <img src="/falaise.png" alt="">
+                    </div>
+                    <div>
+                        <h1 >Création du Site web de l’hotel la Falaise de Bonapriso</h1>
+                    </div>
+                    <p>Nous comprenons les défis auxquels sont confrontées les entreprises de toutes tailles en matière de technologie. C'est pourquoi nous nous engageons à fournir des solutions informatiques sur mesure qui répondent non seulement aux exigences actuelles, mais qui sont également évolutives pour répondre aux besoins futurs. Notre approche consiste à travailler en étroite collaboration avec nos clients pour comprendre leurs objectifs et leurs contraintes, afin de proposer des solutions innovantes et pragmatiques</p>
+                </div>
+            </Container>
+        </div>
+        <div class="relative">
+            <div class="section" style="background-image: url(/newnfm.jpg);">
+                <div class="mask"></div>
+            </div>
+            <Container>
+                <div class="desc">
+                    <div>
+                        <img src="/image.png" alt="">
+                    </div>
+                    <div>
+                        <h1 >Création du Site web de l’hotel la Falaise de Bonapriso</h1>
+                    </div>
+                    <p>Nous comprenons les défis auxquels sont confrontées les entreprises de toutes tailles en matière de technologie. C'est pourquoi nous nous engageons à fournir des solutions informatiques sur mesure qui répondent non seulement aux exigences actuelles, mais qui sont également évolutives pour répondre aux besoins futurs. Notre approche consiste à travailler en étroite collaboration avec nos clients pour comprendre leurs objectifs et leurs contraintes, afin de proposer des solutions innovantes et pragmatiques</p>
+                </div>
+            </Container>
+        </div>
+    </section>
+    <ContactBtn />
+</Page>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" is:raw></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" is:raw></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js" is:raw></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js" is:raw></script>
+
+	<script>
+		// use a script tag or an external JS file
+    </script>

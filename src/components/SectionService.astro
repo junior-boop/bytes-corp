@@ -1,0 +1,143 @@
+---
+import Container from "./Container.astro";
+
+
+---
+
+<style>
+    .line1{
+        left: -100px;
+    }
+    .line2{
+        left: -1200px;
+    }
+
+    .screen {
+        @apply scale-105 rotate-[3deg];
+    }
+
+    .btn-bytes {
+        position : relative;
+        z-index: 5
+    }
+
+    .btn-bytes::before {
+        content: '';
+        position: absolute;
+
+        width: 42px;
+        aspect-ratio: 1/1;
+        z-index: -1;
+        transition: all ease-in-out .3s;
+        @apply bg-turquase rounded-full;
+    }
+    .btn-bytes.white::before {
+        content: '';
+        @apply bg-white rounded-full;
+    }
+
+    .btn-bytes:hover::before {
+        width: 62px;
+        aspect-ratio: 1/1;
+    }
+
+    .service {
+        @apply w-[302px] h-[420px] shadow-lg rounded-xl border flex items-center justify-center;
+    }
+</style>
+
+<section class="py-[100px] overflow-hidden relative flex items-center h-[1000px] mb-10">
+    <div class="screen overflow-hidden absolute z-0">
+        <div class="line1 flex items-center relative">
+           <div class="py-5 px-2"><div class = "service"><img src="/Frame.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(1).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(2).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(3).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(4).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(5).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(6).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(7).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/logo_odoo.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/Frame1.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(7).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(6).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(5).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image.png" alt=""></div></div>
+        </div>
+        <div class="line2 flex items-center relative">
+           <div class="py-5 px-2"><div class = "service"><img src="/image.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/securiter.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/maintenance.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/cybersecurite.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/formation.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/ordinateur.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/securiter.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/maintance.png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(1).png" alt=""></div></div>
+           <div class="py-5 px-2"><div class = "service"><img src="/image_(2).png" alt=""></div></div>
+        </div>
+    </div>
+    <div class="absolute top-0 z-[2] h-[30%] w-full" style="background-image: linear-gradient(180deg, white, #fff0);"></div>
+    <div class="absolute bottom-0 z-[2] h-[50%] w-full" style="background-image: linear-gradient(0deg, white 20%, #fff0);"></div>
+    <Container>
+        <div class = "space-y-3 relative z-[10] h-[600px] flex items-center justify-center lg:block">
+            <div data-aos="fade-up" class="px-10 py-9 bg-turquase w-[80%] lg:w-[60%] rounded-xl">
+                <div class="text-5xl font-extrabold mb-5">Services</div>
+                <div class="mb-10">
+                    Notre
+                    approche consiste à travailler en étroite collaboration avec nos clients pour
+                    comprendre leurs objectifs et leurs contraintes, afin de proposer des solutions
+                    innovantes et pragmatiques
+                </div>
+                <a href="/entreprise" class="inline-flex items-center justify-between gap-5 font-bold"> 
+                    Avoir plus d’informations
+
+                    <span class="btn-bytes white w-[33px] aspect-square rounded-full  flex items-center justify-center text-skyblue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </Container>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" is:raw></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" is:raw></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js" is:raw></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js" is:raw></script>
+
+<script>
+// import gsap from "../libs/gsap";
+    // @ts-ignore
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.to('.line1', {
+        scrollTrigger : {
+            trigger : '.line1',
+            start: 'top bottom',
+            end : "bottom top",
+            toggleActions : "play pause resume reverse",
+            scrub : 1
+        },
+        x : -1200,
+        duration : 4,
+
+    });
+    gsap.to('.line2', {
+        scrollTrigger : {
+            trigger : '.line2',
+            start: 'top bottom',
+            end : "bottom top",
+            toggleActions : "play pause resume reverse",
+            scrub : 1
+        },
+        x : 500,
+        duration : 4,
+
+    })
+
+
+</script>

@@ -1,0 +1,99 @@
+---
+import ContactBtn from "../components/ContactBtn.astro";
+import Container from "../components/Container.astro";
+import Page from "../layouts/Page.astro";
+
+
+---
+
+
+<Page>
+    <section class="relative h-[450px] bg-turquase">
+        <div class="absolute right-0 h-[450px] bg-turquase">
+            <div class="relative h-full aspect-[19/9] bg-white bg-center bg-no-repeat bg-cover" style="background-image: url(/odoo-bg.png) ;">
+                <div class="bg-gradient-to-r from-turquase w-[50%] h-full"></div>
+            </div>
+        </div>
+        <div class="h-full w-full flex items-center relative ">
+            <Container>
+                <div class="space-y-6">
+                    <div>
+                        <div class="text-5xl pl-7 font-extrabold">Notre<br>  Partenariat avec</div> 
+                        <img src="/logo_odoo.png"/>
+                    </div>
+                    <div class="pl-7 w-[60%]">
+                        En tant que partenaire d’Odoo, Bytes-Corp s’engage à offrir des solutions innovantes et personnalisées pour répondre aux besoins de gestion d’entreprise. Ce partenariat reflète notre expertise et notre engagement à accompagner nos clients dans leur transformation digitale.
+                    </div>
+                </div>
+            </Container>
+        </div>
+    </section>
+    <section class="py-[120px]">
+        <Container>
+            <div class="flex gap-10 items-start">
+                <div data-aos="fade-up" class="w-[50%] aspect-square">
+                    <img src="/odoo_intergrer.webp" alt="integrateur Odoo" class="w-full aspect-square rounded-2xl object-cover object-center">
+                </div>
+                <div class="flex-1 pt-10 space-y-4">
+                    <div class="text-4xl font-extrabold">Pourquoi choisir Odoo ?</div>
+                    <ul class="space-y-4">
+                        <li>
+                            <div class="text-xl font-bold">Un logiciel tout-en-un :</div>
+                            Odoo propose une suite d’applications intégrées couvrant tous les aspects de la gestion d’entreprise (CRM, ERP, comptabilité, ressources humaines, etc.).
+                        </li>
+                        <li>
+                            <div class="text-xl font-bold">Modulaire et évolutif :</div>
+                            Commencez avec les modules dont vous avez besoin et ajoutez-en au fur et à mesure que votre entreprise grandit.
+                        </li>
+                        <li>
+                            <div class="text-xl font-bold">Accessibilité :</div>
+                            Une interface intuitive et accessible depuis n’importe quel appareil.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </Container>
+    </section>
+    <section class="pb-[120px]">
+        <Container>
+            <div class="flex gap-10 items-start">
+                
+                <div class="flex-1 pt-10 space-y-4">
+                    <div class="text-4xl font-extrabold">Notre rôle en tant que partenaire Odoo</div>
+                    <ul class="space-y-4">
+                        <li>
+                            <div class="text-xl font-bold">Analyse de vos besoins</div>
+                            Nous évaluons vos processus actuels pour vous proposer les solutions Odoo les mieux adaptées.
+                        </li>
+                        <li>
+                            <div class="text-xl font-bold">Personnalisation et développement</div>
+                            Nous personnalisons les modules Odoo selon vos spécifications et développons des fonctionnalités supplémentaires si nécessaire.
+                        </li>
+                        <li>
+                            <div class="text-xl font-bold">Formation et support</div>
+                            Notre équipe assure une formation complète pour vos utilisateurs et un support technique continu pour garantir une transition fluide.
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" class="w-[50%] aspect-square">
+                    <img src="/17.png" alt="integrateur Odoo" class="w-full aspect-square rounded-2xl object-cover object-center">
+                </div>
+            </div>
+        </Container>
+    </section>
+    <section class="h-[650px] bg-cover bg-no-repeat bg-center" style="background-image: url(/image_odoo.jpg);">
+        <div  class="h-full w-full bg-[#0004] flex items-center">
+            <Container>
+                <div data-aos="fade-up" class="w-[50%] p-9 bg-white space-y-4 rounded-xl">
+                    <div class="text-3xl font-extrabold">Les avantages de travailler avec nous</div>
+                    <ul class="space-y-2">
+                        <li>Une expertise reconnue dans l’intégration des solutions Odoo.</li>
+                        <li>Une équipe dédiée, formée et certifiée par Odoo.</li>
+                        <li>Un suivi personnalisé tout au long de votre projet et au-delà.</li>
+                    </ul>
+                </div>
+            </Container>
+        </div>
+    </section>
+    <ContactBtn />
+</Page>
