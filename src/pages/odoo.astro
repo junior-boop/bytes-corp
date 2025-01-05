@@ -8,20 +8,20 @@ import Page from "../layouts/Page.astro";
 
 
 <Page>
-    <section class="relative h-[450px] bg-turquase">
-        <div class="absolute right-0 h-[450px] bg-turquase">
-            <div class="relative h-full aspect-[19/9] bg-white bg-center bg-no-repeat bg-cover" style="background-image: url(/odoo-bg.png) ;">
-                <div class="bg-gradient-to-r from-turquase w-[50%] h-full"></div>
+    <section class="flex flex-col-reverse lg:block relative h-[900px] bg-turquase">
+        <div class="relative lg:absolute lg:right-0 h-[300px] lg:h-[450px] bg-turquase">
+            <div class="relative h-[300px] lg:h-full lg:aspect-[19/9] bg-white bg-center bg-no-repeat bg-cover" style="background-image: url(/odoo-bg.png) ;">
+                <div class="bg-gradient-to-b lg:bg-gradient-to-r from-turquase w-full h-[50%] lg:w-[50%] lg:h-full"></div>
             </div>
         </div>
-        <div class="h-full w-full flex items-center relative ">
+        <div class="h-[600px] lg:h-full w-full flex items-center relative">
             <Container>
-                <div class="space-y-6">
+                <div class=" space-y-6">
                     <div>
-                        <div class="text-5xl pl-7 font-extrabold">Notre<br>  Partenariat avec</div> 
+                        <div class="text-4xl lg:text-5xl pl-7 font-extrabold">Notre<br>  Partenariat avec</div> 
                         <img src="/logo_odoo.png"/>
                     </div>
-                    <div class="pl-7 w-[60%]">
+                    <div class="pl-7 pr-6 lg:pr-0 w-full lg:w-[60%]">
                         En tant que partenaire d’Odoo, Bytes-Corp s’engage à offrir des solutions innovantes et personnalisées pour répondre aux besoins de gestion d’entreprise. Ce partenariat reflète notre expertise et notre engagement à accompagner nos clients dans leur transformation digitale.
                     </div>
                 </div>
@@ -30,11 +30,11 @@ import Page from "../layouts/Page.astro";
     </section>
     <section class="py-[120px]">
         <Container>
-            <div class="flex gap-10 items-start">
-                <div data-aos="fade-up" class="w-[50%] aspect-square">
+            <div class="flex gap-10 items-start flex-col lg:flex-row px-6 lg:px-0">
+                <div data-aos="fade-up" class="w-full lg:w-[50%] aspect-square">
                     <img src="/odoo_intergrer.webp" alt="integrateur Odoo" class="w-full aspect-square rounded-2xl object-cover object-center">
                 </div>
-                <div class="flex-1 pt-10 space-y-4">
+                <div class="flex-1 lg:pt-10 space-y-4">
                     <div class="text-4xl font-extrabold">Pourquoi choisir Odoo ?</div>
                     <ul class="space-y-4">
                         <li>
@@ -56,9 +56,8 @@ import Page from "../layouts/Page.astro";
     </section>
     <section class="pb-[120px]">
         <Container>
-            <div class="flex gap-10 items-start">
-                
-                <div class="flex-1 pt-10 space-y-4">
+            <div class="flex flex-col-reverse lg:flex-row  gap-10 items-start px-6 lg:px-0">
+                <div class="flex-1 lg:pt-10 space-y-4">
                     <div class="text-4xl font-extrabold">Notre rôle en tant que partenaire Odoo</div>
                     <ul class="space-y-4">
                         <li>
@@ -75,16 +74,16 @@ import Page from "../layouts/Page.astro";
                         </li>
                     </ul>
                 </div>
-                <div data-aos="fade-up" class="w-[50%] aspect-square">
+                <div data-aos="fade-up" class="w-full lg:w-[50%] aspect-square">
                     <img src="/17.png" alt="integrateur Odoo" class="w-full aspect-square rounded-2xl object-cover object-center">
                 </div>
             </div>
         </Container>
     </section>
     <section class="h-[650px] bg-cover bg-no-repeat bg-center" style="background-image: url(/image_odoo.jpg);">
-        <div  class="h-full w-full bg-[#0004] flex items-center">
+        <div  class="h-full w-full bg-[#0004] flex items-end lg:items-center py-10 lg:py-0 px-6 lg:px-0">
             <Container>
-                <div data-aos="fade-up" class="w-[50%] p-9 bg-white space-y-4 rounded-xl">
+                <div data-aos="fade-up" class="lg:w-[50%] p-9 bg-white space-y-4 rounded-xl">
                     <div class="text-3xl font-extrabold">Les avantages de travailler avec nous</div>
                     <ul class="space-y-2">
                         <li>Une expertise reconnue dans l’intégration des solutions Odoo.</li>
