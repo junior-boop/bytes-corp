@@ -8,7 +8,6 @@ if(url.method === "POST"){
         const name = param.get('name')
         const email = param.get('email')
         const messge = param.get('message')
-        console.log('je fonctionne', name, email, messge)
 
         const texteHTML = `<p><strong>Nom Complet : </strong>${name}</p><p><strong>E-mail de l'utilisateur :</strong> ${email}</p><p><strong>Message :</strong> ${messge}</p>`;
         const textRAW = `Nom Complet : ${name}, E-mail de l'utilisateur : ${email}, Message : ${messge}`;
@@ -41,9 +40,7 @@ if(url.method === "POST"){
         })
     });
 
-
     if(send.ok){
-        console.log('succes')
         const result = await send.json()
     }
 
