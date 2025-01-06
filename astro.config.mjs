@@ -11,5 +11,9 @@ export default defineConfig({
   output : 'server',
   site: 'https://example.com',
   integrations: [mdx(), sitemap(), tailwind(), react()],
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    platformProxy :{
+      enabled : true
+    }
+  }),
 });
