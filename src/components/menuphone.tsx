@@ -18,7 +18,7 @@ export default function MenuPhone(){
 function Menu ({ onClick }: { onClick : () => void }) {
     const btnMobile = "border-slate-700 border-b py-4 px-6"
     return(
-        <div  className="absolute top-0 w-dvw h-dvh bg-black right-[-16px] top-[-14px] flex flex-col justify-between">
+        <div  className="absolute w-dvw h-dvh bg-black right-[-16px] top-[-14px] flex flex-col justify-between">
                 <div>
                     <div className={`${btnMobile} flex items-center gap-4`}>
                         <button onClick={onClick}>

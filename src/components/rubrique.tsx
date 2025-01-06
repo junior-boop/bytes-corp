@@ -10,7 +10,7 @@ interface rubrique {
 }
 
 export default function Rubrique({ icone, name, width = 325, height = 418, delay = "0" }: rubrique){
-    console.log(width)
+
     return (
         <div data-aos="fade-up" data-aos-delay={delay}>
             <div className={`${width === 325 ? `w-[325px]` : 'w-full'} ${height === 418 ? 'h-[418px]' : 'h-[286px]'} bg-turquase ${width === 325 ? "p-9" : "p-6"} rounded-2xl flex flex-col justify-between items-center`}>
