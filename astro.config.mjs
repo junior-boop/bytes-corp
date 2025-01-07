@@ -17,5 +17,5 @@ export default defineConfig({
     mode: 'standalone',
   }),
 
-  server: { port: 10000, host: true}
+  server: { port: 10000, host: "0.0.0.0"}
 });
