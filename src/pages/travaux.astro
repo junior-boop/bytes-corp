@@ -1,5 +1,5 @@
 ---
-export const prerender = true
+// export const prerender = true
 
 import ContactBtn from "../components/ContactBtn.astro";
 import Container from "../components/Container.astro";
@@ -22,6 +22,10 @@ import Page from "../layouts/Page.astro";
     .section {
         @apply w-full h-dvh  absolute top-0 left-0 z-[1] bg-cover bg-no-repeat bg-center;
 
+        .degrader {
+            @apply w-full h-full bg-gradient-to-t from-transparent to-black;
+        }
+
         .mask {
             @apply bg-[#0005] w-dvw h-dvh;
         }
@@ -32,7 +36,7 @@ import Page from "../layouts/Page.astro";
         @apply px-6 lg:px-0 w-[90%] lg:w-[50%] space-y-4 h-dvh flex flex-col justify-end py-20 relative z-10;
 
         h1 {
-            line-height: 1.2;
+            line-height: 1.2 !important;
             @apply text-2xl lg:text-[40px] font-bold ;
         }
     }
@@ -54,6 +58,7 @@ import Page from "../layouts/Page.astro";
     <section class="animation">
         <div class="relative">
             <div class="section" style="background-image: url(/chambre-falaise.png);">
+                
                 <div class="mask"></div>
             </div>
             <Container>
@@ -62,29 +67,60 @@ import Page from "../layouts/Page.astro";
                         <img src="/falaise.png" alt="">
                     </div>
                     <div>
-                        <h1 >Création du Site web de l’hotel la Falaise de Bonapriso</h1>
+                        <h1 >SOLUTION DE FIDÉLISATION DES CLIENTS AVEC EZEE ABSOLUTE</h1>
                     </div>
-                    <p>Nous comprenons les défis auxquels sont confrontées les entreprises de toutes tailles en matière de technologie. C'est pourquoi nous nous engageons à fournir des solutions informatiques sur mesure qui répondent non seulement aux exigences actuelles, mais qui sont également évolutives pour répondre aux besoins futurs. Notre approche consiste à travailler en étroite collaboration avec nos clients pour comprendre leurs objectifs et leurs contraintes, afin de proposer des solutions innovantes et pragmatiques</p>
+                    <p>L'intégration de la solution EZEE Absolute a permis à l'Hôtel La Falaise de Douala de: Améliorer l'expérience client grâce à une gestion plus efficace des réservations et des programmes de fidélité.
+                        Augmenter la rétention des clients par le biais de programmes de fidélisation personnalisés.
+                        Optimiser les opérations hôtelières et réduire les coûts opérationnels.
+                        </p>
                 </div>
             </Container>
         </div>
         <div class="relative">
-            <div class="section" style="background-image: url(/newnfm.jpg);">
+            <div class="section" style="background-image: url(/J10.jpg); ">
+                <div class="degrader"></div>
                 <div class="mask"></div>
             </div>
             <Container>
                 <div class="desc">
-                    <div>
-                        <img src="/image.png" alt="">
+                    <div class="w-[150px] aspect-square p-4 rounded-lg bg-white flex items-center justify-center">
+                        <img src="/J10_logo.png" alt="">
                     </div>
                     <div>
-                        <h1 >Création du Site web de l’hotel la Falaise de Bonapriso</h1>
+                        <h1 >APPLICATION WEB DE SUIVI DU RECOUVREMENT DES CRÉANCES POUR J10 CONSULTING</h1>
                     </div>
-                    <p>Nous comprenons les défis auxquels sont confrontées les entreprises de toutes tailles en matière de technologie. C'est pourquoi nous nous engageons à fournir des solutions informatiques sur mesure qui répondent non seulement aux exigences actuelles, mais qui sont également évolutives pour répondre aux besoins futurs. Notre approche consiste à travailler en étroite collaboration avec nos clients pour comprendre leurs objectifs et leurs contraintes, afin de proposer des solutions innovantes et pragmatiques</p>
+                    <p>J10 Consulting, une entreprise de droit français, a exprimé le besoin d'une solution innovante pour le suivi du recouvrement des créances, intégrant des passerelles de paiements. Bytes-Corp a été choisi pour élaborer cette solution web, démontrant ainsi notre capacité à répondre aux exigences internationales et à intégrer des technologies de pointe.</p>
                 </div>
             </Container>
         </div>
     </section>
+    <Container>
+        <div class="py-28">
+            <div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-skyblue mb-6 lg:mb-10">Autres réalisations</h2>
+                
+            </div>
+
+            <div class="flex gap-6 items-center bg-turquase p-6 rounded-xl mb-4">
+                <div class="w-[140px] aspect-[16/9] p-4 rounded-lg bg-white flex items-center justify-center border">
+                    <img src="/logo-perenco.png" alt="">
+                </div>
+                <div class="flex-1">
+                    <h1 class="text-2xl font-bold">Formation : Perfectionnement Excel</h1>
+                    <p>Approfondissement des connaissances sur l'utilisation du tableur Microsoft Excel pour les employés de Perenco </p>
+                </div>
+            </div>
+            <div class="flex gap-6 items-center bg-turquase p-6 rounded-xl">
+                <div class="w-[140px] aspect-[16/9] p-4 rounded-lg bg-white flex items-center justify-center border">
+                    <img src="/GTID-Couleur.png" alt="">
+                </div>
+                <div class="flex-1">
+                    <h1 class="text-2xl font-bold">GTID</h1>
+                    <p>Conception et réalisation du site web de Golf Transit International Douane.</p>
+                </div>
+            </div>
+        </div>
+    </Container>
     <ContactBtn />
 </Page>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" is:raw></script>

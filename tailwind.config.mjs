@@ -6,6 +6,9 @@ export default {
 			colors : {
 				turquase : '#EFF7FF',
 				skyblue: "#003A74"
+			},
+			FontFace : {
+				playfair : "var(--playfair-display)"
 			}
 		},
 	},

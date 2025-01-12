@@ -50,8 +50,13 @@ import ContactFormulaire from "../components/ContactFormulaire.astro";
 					Passez à l’action
 				</div>
                 <div class="flex flex-col-reverse lg:flex-row items-start w-full pt-10">
-                    <div class="w-full lg:w-[400px] hidden lg:flex justify-center lg:h-[350px] border-r ">
+                    <div class="w-full lg:w-[450px] hidden lg:flex justify-center lg:h-[350px] border-r ">
+                        
                         <div>
+                            <div class="w-[350px] h-[170px] mb-5 bg-turquase rounded-xl p-6 space-y-4">
+                                <div class="text-xl font-bold">Faites nous part de votre besoins</div>
+                                <a href="/customer" class="w-full py-3 flex justify-center text-base font-bold bg-[#003A74] rounded-full text-white"> Décrivez-nous votre besoin.</a>
+                            </div>
                             <div class="flex gap-2">
                                 <div class="w-[52px] aspect-square flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19.938 8H21a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1.062A8 8 0 0 1 12 23v-2a6 6 0 0 0 6-6V9A6 6 0 0 0 6 9v7H3a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1.062a8.001 8.001 0 0 1 15.876 0M3 10v4h1v-4zm17 0v4h1v-4zM7.76 15.785l1.06-1.696A5.97 5.97 0 0 0 12 15a5.97 5.97 0 0 0 3.18-.911l1.06 1.696A7.96 7.96 0 0 1 12 17a7.96 7.96 0 0 1-4.24-1.215"/></svg>
@@ -72,7 +77,6 @@ import ContactFormulaire from "../components/ContactFormulaire.astro";
                             </div>
                         </div>
                     </div>
-                    <!-- <ContactForm client:load /> -->
                      <ContactFormulaire />
                 </div>
 			</div>

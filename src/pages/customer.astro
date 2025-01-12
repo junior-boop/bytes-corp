@@ -1,0 +1,24 @@
+---
+import ContactBtn from "../components/ContactBtn.astro";
+import Container from "../components/Container.astro";
+import OrderPage from "../components/joinus";
+import Page from "../layouts/Page.astro";
+
+
+---
+
+<Page>
+    <section class="bg-turquase py-[60px] lg:py-[100px]">
+        <Container>
+            <div class="w-[90%] lg:w-[70%] text-4xl lg:text-6xl font-bold text-skyblue px-6 lg:px-0">
+                Faites nous part de votre besoins
+            </div>
+        </Container>
+    </section>
+    <Container>
+        <div class="px-6 lg:px-0">
+            <OrderPage client:load />
+        </div>
+        <ContactBtn />
+    </Container>
+</Page>

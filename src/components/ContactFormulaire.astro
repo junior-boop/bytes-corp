@@ -1,62 +1,9 @@
 ---
-const url = Astro.request
-if(url.method === "POST"){
-    try {
-        
-        const param = await Astro.request.formData()
 
-        const name = param.get('name')
-        const email = param.get('email')
-        const messge = param.get('message')
-
-        const texteHTML = `<p><strong>Nom Complet : </strong>${name}</p><p><strong>E-mail de l'utilisateur :</strong> ${email}</p><p><strong>Message :</strong> ${messge}</p>`;
-        const textRAW = `Nom Complet : ${name}, E-mail de l'utilisateur : ${email}, Message : ${messge}`;
-        const send = await fetch('https://api.mailjet.com/v3.1/send', {
-        method : "POST",
-
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Basic ' + btoa("60e0fe4c624eb45f8b9f21549c9fe65f:1405ce033c224374af5d13f3ca8b5602"), 
-        },
-
-        body: JSON.stringify({
-            'Messages': [
-                {
-                    'From': {
-                        'Email': 'bytescorp24@gmail.com',
-                        'Name': 'Bytes-Corp'
-                    },
-                    'To': [
-                        {
-                            'Email': 'supportit@bytes-corp.com',
-                            'Name': 'Client'
-                        }
-                    ],
-                    'Subject': 'Message depuis le Site Internet',
-                    'TextPart' : textRAW ,
-                    'HTMLPart': texteHTML
-                }
-            ]
-        })
-    });
-
-    if(send.ok){
-        const result = await send.json()
-    }
-
-
-    } catch (error) {
-        if (error instanceof Error) {
-        console.error(error.message);
-    }
-    }
-
-
-}
 ---
 
 <div class="flex-1 lg:px-8 w-full lg:w-auto">
-    <form method="POST"  class="px-6 lg:px-10">
+    <form  class="px-6 lg:px-10">
         <div class="mb-4">
             <label for="name" class="block pl-3 mb-2">Nom complet*</label>
             <input type="text" name = "name" id = "name" required class="w-full px-3 py-2 border rounded-xl text-lg bg-turquase"/>
@@ -69,6 +16,6 @@ if(url.method === "POST"){
             <label for="message" class="block pl-3 mb-2">Message*</label>
             <textarea  name = "message" id = "message" required class="w-full h-[200px] px-3 py-2 border rounded-xl text-lg bg-turquase "/>
         </div>
-        <button type="submit" class="w-full bg-[#42CDFF] py-4 flex items-center justify-center rounded-full font-bold text-white">Envoyer</button>
+        <button type="submit" class="w-full bg-[#003A74] py-4 flex items-center justify-center rounded-full font-bold text-white">Envoyer</button>
     </form>
 </div>

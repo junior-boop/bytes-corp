@@ -1,0 +1,76 @@
+---
+import ContactBtn from "../components/ContactBtn.astro";
+import Container from "../components/Container.astro";
+import Page from "../layouts/Page.astro";
+
+
+---
+
+<Page>
+    <section class="bg-center bg-no-repeat bg-cover h-[450px]" style="background-image:url(/background_bytes.jpeg)">
+        <div class="h-full flex items-center bg-[#0004]">
+            <Container>
+                <div class="text-4xl lg:text-6xl text-white font-extrabold">A propos de nous ?</div>
+            </Container>
+        </div>
+    </section>
+    <Container>
+        <section class="py-10 mt-[50px]">
+            <h2 class="text-3xl lg:text-4xl font-bold text-skyblue mb-6 lg:mb-10">Qui sommes-nous ?</h2>
+            <p class="text-lg text-gray-600 lg:w-[70%] mb-4"><b>Bytes-Corp</b> est une société camerounaise spécialisée dans l'ingénierie informatique,
+                dédiée au déploiement de solutions informatiques de haute qualité adaptées aux
+                besoins spécifiques de nos clients. Notre mission est d'offrir des services
+                informatiques efficaces, réactifs et fiables aux petites et moyennes entreprises (PME),
+                aux petites et moyennes industries (PMI), aux professions libérales et aux très petites
+                entreprises (TPE), tout en veillant à optimiser les coûts.</p>
+            <p class="text-lg text-gray-600 lg:w-[70%]">Nous comprenons les défis auxquels sont confrontées les entreprises de toutes tailles en matière de technologie. C'est pourquoi nous nous engageons à fournir des solutions informatiques sur mesure qui répondent non seulement aux exigences actuelles, mais qui sont également évolutives pour répondre aux besoins futurs.</p>
+        </section>
+        <section class="py-20">
+            
+           <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-start">
+            
+            <div class="flex-1 md:pt-10">
+                <h2 class="text-3xl lg:text-4xl font-bold text-skyblue mb-6 lg:mb-10">Notre Mission</h2>
+                <p class=" text-lg text-gray-600 mb-4">Notre mission est de fournir des solutions informatiques performantes, réactives et fiables, spécialement conçues pour répondre aux besoins spécifiques des petites et moyennes entreprises (PME), des petites et moyennes industries (PMI), des professions libérales ainsi que des très petites entreprises (TPE). Nous nous engageons à offrir un service personnalisé qui facilite leur croissance et leur transformation numérique, tout en optimisant les coûts opérationnels.</p>
+            </div>
+            <div class=" w-full md:w-1/2 bg-center bg-no-repeat bg-cover aspect-[4/3] rounded-xl" style="background-image:url(/image_odoo.jpg)">
+
+            </div>
+           </div>
+            <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-skyblue mb-4">Notre mission</h3>
+                    <p class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-skyblue mb-4">Notre vision</h3>
+                    <p class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-skyblue mb-4">Nos valeurs</h3>
+                    <p class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                </div>
+            </div> -->
+        </section>
+    </Container>
+    <section class="bg-skyblue py-24 text-white">
+        <Container>
+            <div>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">Nos valeurs</h2>
+                <h1 class="text-4xl md:text-7xl font-bold mb-6 font-playfair">Écoute, Innovation, Collaboration.</h1>
+                <div class="w-[70%]">
+                    Les valeurs de notre entreprise reposent sur l'écoute, l'innovation et la collaboration. Nous plaçons nos clients au cœur de notre démarche, en prenant le temps de comprendre leurs besoins spécifiques. Nous nous engageons à offrir des solutions sur mesure, évolutives et pragmatiques, alliant efficacité et anticipation des défis futurs. Notre objectif est de bâtir des partenariats durables, fondés sur la confiance, l'intégrité et l'excellence dans la réalisation de chaque projet.
+                </div>
+            </div>
+        </Container>
+    </section>
+    <section class="bg-black">
+        <Container>
+            <div class="py-10 flex items-center justify-between">
+                <div class="font-bold text-3xl text-white font-dancing-script">Faites nous part de votre besoins</div>
+                <a href="/customer" class="lg:w-[40%] py-3 flex justify-center text-base font-bold bg-[#003A74] rounded-full text-white"> Décrivez-nous votre besoin.</a>
+            </div>
+        </Container>
+    </section>
+    <ContactBtn />
+</Page>

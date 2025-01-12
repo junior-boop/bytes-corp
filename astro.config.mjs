@@ -9,13 +9,21 @@ import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
-  output : 'server',
+  output : 'static',
   site: 'https://example.com',
   integrations: [mdx(), sitemap(), tailwind(), react()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8200',
+        changeOrigin: true
+      }
+    }
+  }
 
-  adapter: node({
-    mode: 'standalone',
-  }),
+  // adapter: node({
+  //   mode: 'standalone',
+  // }),
 
-  server: { port: 10000, host: "0.0.0.0"}
+  // server: { port: 10000, host: "0.0.0.0"}
 });

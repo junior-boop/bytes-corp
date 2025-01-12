@@ -1,0 +1,23 @@
+---
+import Page from "../layouts/Page.astro";
+import Container from "./Container.astro";
+
+
+---
+
+## Services
+<Page>
+    <section class="bg-center bg-no-repeat bg-cover h-[600px]" style="background-image:url(/background_bytes.jpeg)">
+        <div class="h-full flex items-center bg-[#0004]">
+            <Container>
+                <div class="text-4xl lg:text-6xl text-white font-extrabold">Nos services</div>
+            </Container>
+        </div>
+    </section>
+    <Container>
+        <section class="py-10">
+            <h2 class="text-3xl lg:text-4xl font-bold text-skyblue mb-6 lg:mb-10">Nos services</h2>
+            <p class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </section>
+    </Container>
+</Page>
